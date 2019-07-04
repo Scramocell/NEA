@@ -29,6 +29,7 @@ ENEMY_COLOUR = 3
 colours = {1: (255, 175, 0),
      2: (0, 255, 0),
      3: (0, 0, 255)} 
+#In BGR due to opencv
 
 class Blob:
     '''A generic class for a game object with a position in the game'''
@@ -144,7 +145,7 @@ for episode in range(HOW_MANY_EPISODES):
             env[player.y][player.x] = colours[PLAYER_COLOUR]
             env[enemy.y][enemy.x] = colours[ENEMY_COLOUR] 
 
-            img = Image.fromarray(env, "RGB")
+            img = Image.fromarray(env, "RGB") #Actually opencv interprets colour in BGR
             img = img.resize((300, 300))
             cv2.imshow("", np.array(img))
 

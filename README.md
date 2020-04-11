@@ -1,6 +1,9 @@
 # NEA
 This is my NEA A level project to develop an AI that can play Chinese Checkers against 5 other entities. Originally the game will be 1v1 with two agents this will slowly scale to 6v6. The final plan is to be able to play a 6v6 game without having 5 other people to play with.
 
+# Actual Project
+The actual project is run through main.py. So it is possible to play against AI agents with the program always creating a game of 6 players including yourself. The UI is not very elegant: The image is pixelated, the window is a fixed size and the buttons and ui elements are plain rectangles. The AI works but is slow, the first solution would be to implement threading to allow the AI to work simultaneously.
+
 # Reinforcement 1
 This is my first prototype of reinforcement learning, it is copied from a tutorial by 'Sentdex', a great youtube programming tutorial channel, as part of his reinforcement learning course. I claim no ownership of the code except for a few variable name changes to improve readability.
 
@@ -14,3 +17,4 @@ This is a continuation of reinforcement one to check I understand the underlying
 Now we have a dynamic environment where the enemy and player learn of each other and the random nature of the food. The enemy is concerned with eating the player and does not care about the food, the player is concerned about both. This can create situations where the enemy can learn that the player must go to the food and thus stick around the food.
 
 One possible next step is to save Blob actions in a file, this way specific games can be replayed back rather than waiting a fix amount of episodes and also not being able to replay them
+
